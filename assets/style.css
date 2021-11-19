@@ -1,0 +1,93 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #ffe2bc;
+    color: #ffe2bc;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    background-color: #58b4ae;
+}
+
+#content {
+    height: 485px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ffe277;
+}
+
+.box {
+    background-color: #ffb367;
+    width: 30%;
+    height: 95%;
+    float: left;
+    margin: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #58b4ae;
+}
+
+p {
+    color: #ffb367;
+    text-align: center;
+    padding-top: 40%;
+    padding-left: 15px;
+    letter-spacing: 10px;
+}
+
+.ball {
+    height: 250px;
+    width: 250px;
+    background: radial-gradient(circle at 65% 15%, white 1px, #ffe277 3%, #ffe277 60%, #c2aa56 100%);
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 25%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+.dot {
+    height: 250px;
+    width: 250px;
+    background-color: #ffe277;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 25%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.dot:hover {
+    transform: scale(1.3);
+}
+
+.ball:hover {
+    transform: scale(1.2);
+}
+
+.beam {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 33%;
+    background-color: #ffe277;
+    color: white;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.beam:hover {
+    transform: scale(1.2);
+}
