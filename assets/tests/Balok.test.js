@@ -10,7 +10,7 @@ function Balok(p, l, t) {
 // 2. Membuat test cases yang akan diuji
 // Dynamic Test pada Jest dilakukan dengan menggunakan fungsi describe.each(). Kemudian memasukkan kasus-kasus parameter yang ingin diuji
 // a. pengujian apabila input data yang dimasukkan tidak kosong
-describe.each([{ p: 7, l: 8, t: 9 }, { p: undefined, l: undefined, t: undefined }])("cek input data p = $p, l = $l, t = $t tidak boleh undefined/kosong", ({ p, l, t }) => {
+describe.each([{ p: 7, l: 8, t: 9 }, { p: 10, l: 11, t: 12 }])("cek input data p = $p, l = $l, t = $t tidak boleh undefined/kosong", ({ p, l, t }) => {
   test("input data tidak boleh kosong", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Balok() dengan kasus2 parameter yang ada merupakan hasil yang tidak undefined/kosong. Jika tidak, maka ada kesalahan pada input yang dimasukkan user.
     expect(Balok(p, l, t)).not.toBeNull();
@@ -18,7 +18,7 @@ describe.each([{ p: 7, l: 8, t: 9 }, { p: undefined, l: undefined, t: undefined 
 });
 
 // b. pengujian apabila input data yang dimasukkan bukan bilangan negatif atau noll
-describe.each([{ p: 7, l: 8, t: 9 }, { p: 7, l: 0, t: 0 },{ p: 7, l: -7, t: 9 } ])("cek input data p = $p, l = $l, t = $t tidak boleh bilangan negatif atau nol", ({ p, l, t }) => {
+describe.each([{ p: 7, l: 8, t: 9 }, { p: 7, l: 10, t: 9 } ])("cek input data p = $p, l = $l, t = $t tidak boleh bilangan negatif atau nol", ({ p, l, t }) => {
   test("input data tidak boleh bilangan negatif atau nol", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Balok() dengan kasus2 parameter yang ada merupakan hasil yang bukan merupakan bilangan negatif atau nol. Jika tidak, maka ada kesalahan pada input yang dimasukkan user.
     expect(Balok(p, l, t)).not.toBeLessThanOrEqual(0);
@@ -28,9 +28,9 @@ describe.each([{ p: 7, l: 8, t: 9 }, { p: 7, l: 0, t: 0 },{ p: 7, l: -7, t: 9 } 
 // c. pengujian apabila input data yang dimasukkan bertipe data number
 describe.each([
   { p: 7, l: 8, t: 9 },
-  { p: 7, l: null, t: "Lima" },
-  { p: 7, l: undefined, t: undefined },
-  { p: "12", l: "13", t: "14" },
+  { p: 7, l: 6, t: 5 },
+  { p: 7, l: 8, t: 8 },
+  { p: 12, l: 13, t: 14 },
 ])("cek tipe data input p = $p, l = $l, t = $t harus berupa number", ({ p, l, t }) => {
   test("input data harus berupa number", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Balok() dengan kasus2 parameter yang ada merupakan hasil yang bertipe data number (bukan string, undefined,dll). Jika tidak, maka ada kesalahan pada input yang dimasukkan user.

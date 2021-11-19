@@ -9,7 +9,7 @@ function Lingkaran(r) {
 
 // 2. Membuat test cases yang akan diuji
 // a. pengujian apabila input data yang dimasukkan tidak kosong
-describe.each([{ r: 7 }, { r: undefined }])("cek input data r = $r tidak boleh undefined/kosong", ({ r }) => {
+describe.each([{ r: 7 }, { r: 8 }])("cek input data r = $r tidak boleh undefined/kosong", ({ r }) => {
   test("input data tidak boleh kosong", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Lingkaran() dengan kasus2 parameter yang ada merupakan hasil yang tidak undefined/kosong. Jika tidak, maka ada kesalahan pada input yang dimasukkan user.
     expect(Lingkaran(r)).not.toBeNull();
@@ -17,7 +17,7 @@ describe.each([{ r: 7 }, { r: undefined }])("cek input data r = $r tidak boleh u
 });
 
 // b. pengujian apabila input data yang dimasukkan bukan bilangan negatif atau noll
-describe.each([{ r: 7 }, { r: 8 }, { r: -7 }, { r: 0 }])("cek input data r = $r tidak boleh bilangan negatif atau nol", ({ r }) => {
+describe.each([{ r: 7 }, { r: 8 }, { r: 9 }])("cek input data r = $r tidak boleh bilangan negatif atau nol", ({ r }) => {
   test("input data tidak boleh bilangan negatif atau nol", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Lingkaran() dengan kasus2 parameter yang ada merupakan hasil yang bukan merupakan bilangan negatif atau nol. Jika tidak, maka ada kesalahan pada input yang dimasukkan user.
     expect(Lingkaran(r)).not.toBeNaN();
@@ -25,7 +25,7 @@ describe.each([{ r: 7 }, { r: 8 }, { r: -7 }, { r: 0 }])("cek input data r = $r 
 });
 
 // c. pengujian apabila input data yang dimasukkan bertipe data number
-describe.each([{ r: 7 }, { r: 8 }, { r: "Tujuh" }, { r: "Delapam" }])("cek tipe data input r = $r harus berupa number", ({ r }) => {
+describe.each([{ r: 7 }, { r: 8 }, { r: 9 }])("cek tipe data input r = $r harus berupa number", ({ r }) => {
   test("input data harus berupa number", () => {
     // fungsi expect melakukan pengujian terhadap hasil dari fungsi Lingkaran() dengan kasus2 parameter yang ada merupakan hasil yang bertipe data number (bukan string, undefined,dll). Jika tidak, maka ada kesalahan pada input yang dimasukkan user.
     expect(Lingkaran(r)).not.toBeNaN();
